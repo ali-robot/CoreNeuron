@@ -1,3 +1,11 @@
+/*
+# =============================================================================
+# Copyright (C) 2016-2021 Blue Brain Project
+#
+# See top-level LICENSE file for details.
+# =============================================================================
+*/
+
 #include "coreneuron/nrniv/nrniv_decl.h"
 #include "coreneuron/network/multisend.hpp"
 #include "coreneuron/sim/multicore.hpp"
@@ -378,8 +386,8 @@ void nrn_multisend_receive(NrnThread* nt) {
         }
     }
 #endif
-//	w1 = nrn_wtime() - w1;
-//	w2 = nrn_wtime();
+    //	w1 = nrn_wtime() - w1;
+    //	w2 = nrn_wtime();
 
 #if ENQUEUE == 0
     multisend_receive_buffer[current_rbuf]->enqueue();
